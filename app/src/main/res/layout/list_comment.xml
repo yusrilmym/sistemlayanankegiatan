@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/lay_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="10dp"
+        android:id="@+id/img_member"
+        android:src="@drawable/polinema_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+        <RelativeLayout
+            android:layout_toRightOf="@id/img_member"
+            android:background="@drawable/buble_chat"
+            android:padding="15dp"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/textPrimary"
+                android:id="@+id/name_member"
+                android:layout_marginStart="10dp"
+                android:text="Nama"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/textSecondary"
+                android:id="@+id/date_time"
+                android:text="56 min ago"
+                android:textSize="12dp"
+                android:layout_below="@id/name_member"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/textSecondary"
+                android:id="@+id/comment_member"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@id/date_time"
+                android:layout_below="@id/name_member"
+                android:text="Komentar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lay_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/img_member2"
+        android:src="@drawable/polinema_logo"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <RelativeLayout
+        android:layout_toLeftOf="@id/img_member2"
+        android:background="@drawable/buble_chat_send"
+        android:padding="15dp"
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/textPrimary"
+            android:id="@+id/name_member2"
+            android:layout_marginStart="10dp"
+            android:text="Nama"
+            android:textIsSelectable="true"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/textSecondary"
+            android:id="@+id/date_time2"
+            android:text="56 min ago"
+            android:textSize="12dp"
+            android:layout_below="@id/name_member2"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/textSecondary"
+            android:id="@+id/comment_member2"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toRightOf="@id/date_time2"
+            android:layout_below="@id/name_member2"
+            android:text="Komentar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

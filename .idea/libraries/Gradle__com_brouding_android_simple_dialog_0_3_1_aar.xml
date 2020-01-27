@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.brouding:android-simple-dialog:0.3.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37d6eba5d7b89a574f7166820911c715/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37d6eba5d7b89a574f7166820911c715/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.brouding/android-simple-dialog/0.3.1/b20fbb58c6d8d418ea60f0fb33b7c4892e6d3f23/android-simple-dialog-0.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

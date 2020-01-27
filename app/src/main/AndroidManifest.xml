@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ta.slk.sistemlayanankegiatan">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:name=".Method.Application"
+        android:allowBackup="true"
+        android:icon="@drawable/polinema_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/polinema_logo"
+        android:supportsRtl="true"
+        android:theme="@style/PrimaryTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name=".Activity.Activation"
+            android:theme="@style/PrimaryTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Activity.Guide"
+            android:label="@string/title_activity_guide"
+            android:theme="@style/PrimaryTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UserActivity"
+            android:theme="@style/CustomToolbar" />
+        <activity
+            android:name=".Activity.Register"
+            android:theme="@style/PrimaryTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".DetailGroups"
+            android:label="@string/title_activity_detail_groups"
+            android:theme="@style/PrimaryTheme.NoActionBar" />
+        <activity
+            android:name=".UserInvitation"
+            android:label="@string/title_activity_user_invitation"
+            android:theme="@style/PrimaryTheme.NoActionBar" />
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/PrimaryTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".AdminContent"
+            android:theme="@style/PrimaryTheme.NoActionBar" />
+        <activity
+            android:name=".AddInvitation"
+            android:theme="@style/PrimaryThemeLight.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name=".Service.MyFirebaseMessagingService"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activity.ProfileUser"
+            android:theme="@style/PrimaryTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/PrimaryThemeLight.NoActionBar" />
+        <activity
+            android:name=".Activity.MyGroups"
+            android:label="Groups"
+            android:theme="@style/PrimaryTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Groups"
+            android:theme="@style/PrimaryTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@style/PrimaryTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

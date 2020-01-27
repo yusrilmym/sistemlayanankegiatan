@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminContent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        app:navigationIcon="@drawable/polinema_icon"
+        android:hapticFeedbackEnabled="true"
+        app:titleTextColor="@color/colorLight"
+        android:animateLayoutChanges="true"
+        app:subtitleTextColor="@color/colorLight"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        app:subtitle="Sistem layanan kegiatan"
+        app:title="@string/app_name"
+        android:background="@color/colorPrimary"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow"
+        android:layout_above="@id/admin_nav"
+        app:layout_anchorGravity="top"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/admin_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/shadow"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorPrimary"
+        app:menu="@menu/nav_items">
+    </android.support.design.widget.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/admin_frame"
+        android:layout_below="@id/my_toolbar"
+        android:layout_above="@id/admin_nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_visi"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </FrameLayout>
+</RelativeLayout>

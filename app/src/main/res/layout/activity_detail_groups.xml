@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".DetailGroups">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_detail"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:tint="@color/colorLight"
+            android:background="@android:color/transparent"
+            android:layout_alignParentLeft="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_title"
+            android:textSize="18dp"
+            android:textColor="@color/colorLight"
+            android:text="DETAIL GRUP"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/group_title"
+            android:layout_marginTop="15dp"
+            android:text="GROUP JTI POLINEMA"
+            android:textColor="@color/colorLight"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/txt_title"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/group_admin"
+            android:text="Created by : Admin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/colorLight"
+            android:layout_below="@id/group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_group"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            app:civ_border_color="@color/colorLight"
+            app:civ_border_width="1dp"
+            android:alpha="0.9"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/polinema_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+    </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            app:cardElevation="1sp"
+            android:padding="10dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/lb_desc"
+                    android:layout_margin="10dp"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:text="Deskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_below="@id/lb_desc"
+                    android:id="@+id/icon_desc"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/baseline_description_black_48"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+                <TextView
+                    android:id="@+id/text_description"
+                    android:text="Deskripsi"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@id/lb_desc"
+                    android:layout_toRightOf="@id/icon_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            app:cardElevation="1sp"
+            android:padding="10dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/lb_name"
+                    android:layout_margin="10dp"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="Anggota"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:layout_below="@id/lb_name"
+                    android:id="@+id/icon_name"
+                    android:src="@drawable/team_time"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_toRightOf="@id/icon_name"
+                    android:layout_below="@id/lb_name"
+                    android:id="@+id/recycler_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_option"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@android:color/transparent"
+                android:id="@+id/action_group"
+                android:layout_gravity="center_vertical"
+                android:drawablePadding="20dp"
+                android:drawableTint="@color/mateRed"
+                android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:text="Keluar Grup"
+                android:textColor="@color/mateRed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

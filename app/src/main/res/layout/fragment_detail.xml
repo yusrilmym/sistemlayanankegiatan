@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<RelativeLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity$PlaceholderFragment">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/ly_card"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/fileDocs"
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:tint="@color/colorLight"
+                    android:background="@drawable/cerclebackgroundpurple"
+                    android:src="@drawable/ic_insert_drive_file_black_24dp"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="File"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/locDocs"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_width="160dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/btn_place"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:tint="@color/colorLight"
+                    android:background="@drawable/cerclebackgroundpurple"
+                    android:src="@drawable/baseline_location_on_black_48"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="Lokasi"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        app:cardElevation="1dp"
+        android:layout_below="@id/ly_card"
+        android:id="@+id/card_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/dt_titile"
+                android:textStyle="bold"
+                android:text="Deskripsi"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/dt_detail"
+                android:text="Text"
+                android:layout_marginTop="5dp"
+                android:layout_margin="10dp"
+                android:layout_below="@id/dt_titile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        app:cardElevation="1dp"
+        android:id="@+id/lay_accept"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_below="@id/card_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Undangan Menyetujui"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/c_accept"
+                android:text="0 Anggota"
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+            <android.support.v7.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:id="@+id/recycler_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/lay_pending"
+        app:cardElevation="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/lay_accept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/mateGreen"
+                android:text="Undangan Terkirim"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/c_pending"
+                android:layout_marginHorizontal="10dp"
+                android:text="0 Anggota"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+            <android.support.v7.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:id="@+id/recycler_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/lay_rejected"
+        app:cardElevation="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/lay_pending"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/mateRed"
+                android:text="Undangan Ditolak"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/c_rejected"
+                android:layout_marginHorizontal="10dp"
+                android:text="0 Anggota"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_margin="10dp"
+                android:id="@+id/recycler_rejected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/lay_rejected"
+        android:id="@+id/card_option"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@android:color/transparent"
+            android:id="@+id/action_activity"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/mateRed"
+            android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="Keluar dari Kegiatan"
+            android:textColor="@color/mateRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

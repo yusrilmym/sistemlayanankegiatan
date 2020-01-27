@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:alpha="0.9"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mateGreen"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="0dp"
+        card_view:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <View
+                android:id="@+id/line_indicator"
+                android:background="@color/mateGreen"
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/inv_date"
+                android:layout_marginTop="20dp"
+                android:text="13"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/inv_day"
+                android:layout_below="@id/inv_date"
+                android:text="Thue"
+                android:layout_marginStart="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/v_inv"
+                android:layout_marginLeft="80dp"
+                android:layout_marginVertical="15dp"
+                android:layout_width="1sp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/inv_title"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="30dp"
+                android:text="Title"
+                android:textSize="20dp"
+                android:layout_toRightOf="@id/v_inv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/inv_admin"
+                android:text="Admin"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@id/v_inv"
+                android:layout_below="@id/inv_title"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/inv_clock"
+                android:drawableRight="@drawable/baseline_alarm_black_18"
+                android:text="19.30"
+                android:layout_margin="5dp"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/colorPrimary"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

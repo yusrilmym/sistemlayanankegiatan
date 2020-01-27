@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "723284484808",
+    "firebase_url": "https://sistemlayanankegiatan.firebaseio.com",
+    "project_id": "sistemlayanankegiatan",
+    "storage_bucket": "sistemlayanankegiatan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723284484808:android:877f6229331aa6fb",
+        "android_client_info": {
+          "package_name": "com.ta.slk.sistemlayanankegiatan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723284484808-1fah5bdjddce3blj916mll1ed41mqlg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ta.slk.sistemlayanankegiatan",
+            "certificate_hash": "0a931f56f1bb26fe9a074e5a09a2ed537d835719"
+          }
+        },
+        {
+          "client_id": "723284484808-vdokpcjoajbajmm7spqstdu2mfcc50u2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDce0lkqA3Qtl-l_n9jCpFsEeHq40JvlyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723284484808-vdokpcjoajbajmm7spqstdu2mfcc50u2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

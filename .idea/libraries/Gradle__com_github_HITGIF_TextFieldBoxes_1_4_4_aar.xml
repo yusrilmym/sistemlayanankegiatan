@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.HITGIF:TextFieldBoxes:1.4.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/88ca28c57f30b3e627be6049c64aa80a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/88ca28c57f30b3e627be6049c64aa80a/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.HITGIF/TextFieldBoxes/1.4.4/4792c908d4b18c8ef2b0e90823d375c8834cb7d5/TextFieldBoxes-1.4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
